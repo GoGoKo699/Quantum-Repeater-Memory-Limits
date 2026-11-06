@@ -1,0 +1,110 @@
+{
+  "checks": {
+    "cases": 1275,
+    "largest_log_bound_excess": 0.0
+  },
+  "hashing_threshold": {
+    "fidelity": 0.8107103750847682,
+    "visibility": 0.7476138334463576
+  },
+  "coefficient_examples": [
+    {
+      "p": 0.1,
+      "exponential_for_kappa_below": 1.6341923274503123,
+      "recurrence_hashing_suffices_above": 8.623318989096353,
+      "direct_hashing_suffices_above": 32.570311684253085
+    },
+    {
+      "p": 0.2,
+      "exponential_for_kappa_below": 0.7623993318233352,
+      "recurrence_hashing_suffices_above": 4.045507673897054,
+      "direct_hashing_suffices_above": 15.27989930866194
+    },
+    {
+      "p": 0.5,
+      "exponential_for_kappa_below": 0.19481732986095843,
+      "recurrence_hashing_suffices_above": 1.2136523021691163,
+      "direct_hashing_suffices_above": 4.583969792598583
+    },
+    {
+      "p": 0.8,
+      "exponential_for_kappa_below": 0.04274471148894857,
+      "recurrence_hashing_suffices_above": 0.3792663444278488,
+      "direct_hashing_suffices_above": 1.4324905601870568
+    },
+    {
+      "p": 0.9,
+      "exponential_for_kappa_below": 0.016882595781343136,
+      "recurrence_hashing_suffices_above": 0.18388671244986607,
+      "direct_hashing_suffices_above": 0.6945408776664518
+    }
+  ],
+  "entropy_convergence_examples": [
+    {
+      "L": 100,
+      "a": 5,
+      "alpha": 0.05,
+      "log_K_over_L": 0.2172977513231826,
+      "limiting_entropy": 0.23445438351879397
+    },
+    {
+      "L": 1000,
+      "a": 50,
+      "alpha": 0.05,
+      "log_K_over_L": 0.23160244055918672,
+      "limiting_entropy": 0.23445438351879397
+    },
+    {
+      "L": 100,
+      "a": 20,
+      "alpha": 0.2,
+      "log_K_over_L": 0.6379115054890356,
+      "limiting_entropy": 0.6611777786037919
+    },
+    {
+      "L": 1000,
+      "a": 200,
+      "alpha": 0.2,
+      "log_K_over_L": 0.6577037189400724,
+      "limiting_entropy": 0.6611777786037919
+    },
+    {
+      "L": 100,
+      "a": 100,
+      "alpha": 1.0,
+      "log_K_over_L": 1.7341353321427375,
+      "limiting_entropy": 1.762747174039086
+    },
+    {
+      "L": 1000,
+      "a": 1000,
+      "alpha": 1.0,
+      "log_K_over_L": 1.75873575365454,
+      "limiting_entropy": 1.762747174039086
+    },
+    {
+      "L": 100,
+      "a": 500,
+      "alpha": 5.0,
+      "log_K_over_L": 3.274609742822003,
+      "limiting_entropy": 3.3058888930189596
+    },
+    {
+      "L": 1000,
+      "a": 5000,
+      "alpha": 5.0,
+      "log_K_over_L": 3.3016104575575755,
+      "limiting_entropy": 3.3058888930189596
+    }
+  ],
+  "weighted_bound_example": {
+    "n": 10,
+    "p": 0.5,
+    "tau": 1.0,
+    "a": 1,
+    "synchronized_lower": 0.0009765625,
+    "unweighted_upper": 0.0185546875,
+    "weighted_upper": 0.0011180486152732993,
+    "weighted_to_lower_ratio": 1.1448817820398585
+  }
+}

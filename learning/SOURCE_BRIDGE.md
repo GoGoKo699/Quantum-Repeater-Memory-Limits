@@ -26,10 +26,10 @@ Section 19.2 uses $`E_R`$, not $`E_F`$. Lemma 19.4.1 concerns pure-state concent
 
 | Draft notation | Project translation |
 | --- | --- |
-| $`|\Phi^+\rangle`$ | The density operator is $`\Phi_2=|\phi_2\rangle\langle\phi_2|`$. |
+| $`\lvert\Phi^+\rangle`$ | The density operator is $`\Phi_2=\lvert\phi_2\rangle\langle\phi_2\rvert`$. |
 | $`\pi`$ | $`I_d/d`$. |
-| $`\|\rho-\sigma\|_1`$ in §9.1.2 | The project error is half this norm. |
-| $`H(A|B),\ I(A\rangle B)`$ | $`S(A|B),\ -S(A|B)`$. |
+| $`\lVert\rho-\sigma\rVert_1`$ in §9.1.2 | The project error is half this norm. |
+| $`H(A\mid B),\ I(A\rangle B)`$ | $`S(A\mid B),\ -S(A\mid B)`$. |
 | Depolarizing parameter in Eq. (4.344) | $`1-e^{-s/\tau}`$; retain $`p`$ for source success. |
 
 The remaining symbols are fixed by the [project model](../science/model.md). There are $`n`$ elementary edges. The deterministic source-time budget is $`H`$, the fixed target size is $`k_H`$, and $`R_n(\tau,p)`$ is measured in ebits per slot. The target error is

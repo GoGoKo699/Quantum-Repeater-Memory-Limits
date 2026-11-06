@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "expressions": [
+    {
+      "path": "README.md",
+      "index": 6,
+      "source_sha256": "f3120ce49c27c68f33d36c8f4786a78639fcb011244e11e8956d9a1a4a36a415",
+      "required_text": [
+        "τn=o(n)",
+        "lnRn(τn,p)",
+        "nlnp+o(n)"
+      ]
+    },
+    {
+      "path": "README.md",
+      "index": 13,
+      "source_sha256": "012a9bb7e1ef6f291309624ee2c460d6d3c2ec2ab5b641dd2cd4b0941fd88f63",
+      "required_text": [
+        "pn≤Rn(τ,p)",
+        "pnK(n,aτ)"
+      ]
+    },
+    {
+      "path": "README.md",
+      "index": 18,
+      "source_sha256": "abd9e0a211b2d433d2587d4eeb41147e598051d875e0e44ef01ed20da7982b38",
+      "required_text": [
+        "0.0009765625",
+        "R10",
+        "0.0011180486153"
+      ]
+    },
+    {
+      "path": "science/adaptive_converse.md",
+      "index": 78,
+      "source_sha256": "e194b74d13414447a9353e19330eb99703b631bebb55d0c24a1f93fc02b5d696",
+      "required_text": [
+        "TV(t)≤A<τln3",
+        "TV(t)≤aτ",
+        "(20)"
+      ]
+    }
+  ]
+}

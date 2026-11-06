@@ -20,6 +20,10 @@ This repository studies the distilled-ebit rate of a line of independent element
 - verification/README.md: exact reproduction commands, observed supporting checks and numerical limitations.
 
 ## Study routes
+- learning/README.md: navigation for the common learning material.
+- learning/SOURCE_BRIDGE.md: the single anchor, Wilde's author notes dated 2021-12-05; verified sections, notation translation and project-specific additions.
+- learning/MILESTONES.md: exactly M01 through M30, in background/preliminaries and narrative/innovation phases, with dependencies and understanding targets.
+- learning/TUTORIAL.md: a worked explanatory route connected to the settled milestone map. It does not replace the model or proofs.
 - Story: README.md -> science/interpretation.md -> science/model.md.
 - Theorem: science/model.md -> science/adaptive_converse.md -> science/finite_bounds.md.
 - Constructions: science/achievability.md -> science/noise_comparison.md.

@@ -14,7 +14,7 @@ and define the Bell-centered isotropic state
 
 ```math
 W(v)=v\Phi_2+(1-v)\frac{I_4}{4},\qquad 0\le v\le1.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 For two qubits this family is locally unitarily equivalent to the Werner family used in repeater models. We use the isotropic convention so that every corrected elementary pair is centered on $`\Phi_2`$.
@@ -35,9 +35,9 @@ Every occupied qubit at an intermediate vertex evolves under
 
 ```math
 \mathcal D_s(X)=e^{-s/\tau}X+
-\bigl(1-e^{-s/\tau}\bigr)\operatorname{Tr}(X)\frac{I_2}{2},
+\bigl(1-e^{-s/\tau}\bigr)\mathrm{Tr}(X)\frac{I_2}{2},
 \qquad \tau\gt 0.
-\tag{2}
+\qquad\text{(2)}
 ```
 
 Between successive control events, the evolution on all occupied intermediate registers is the tensor product of these channels. The law is Markovian: after any observed causal history, later increments have this same product-channel action and no dependence on earlier environment states. There is no accessible environment record. Moving a qubit between buffers at the same vertex preserves its quantum state and does not restart its accumulated exposure. The qubits at vertices $`0`$ and $`n`$ have ideal storage.
@@ -59,7 +59,7 @@ A protocol of horizon $`H\in\mathbb N`$ uses source slots $`1,\ldots,H`$, then o
 ```math
 \varepsilon_H=
 \frac12\left\|\rho^{(H)}_{A_HB_H}-\Phi_{2^{k_H}}\right\|_1,
-\tag{3}
+\qquad\text{(3)}
 ```
 
 where $`\rho^{(H)}`$ is averaged over all outcomes, including failures and aborts. An aborted branch can be filled with a fixed separable target state. The distilled-ebit rate $`R_n(\tau,p)`$ is the supremum of $`\liminf_{H\to\infty}k_H/H`$ over protocol sequences with $`\varepsilon_H\to0`$. The limit in $`H`$ is taken at each fixed $`n,\tau,p`$. All retries, discarded links and unfavorable outcomes therefore contribute to elapsed source time.

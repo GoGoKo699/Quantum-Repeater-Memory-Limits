@@ -11,14 +11,14 @@ K(n,a)=\sum_{j=0}^{\min(n-1,a)}
 2^j\binom{n-1}{j}\binom aj,
 \qquad
 a_\tau=\lceil\tau\ln3\rceil-1.
-\tag{4}
+\qquad\text{(4)}
 ```
 
 Since $`\tau\gt 0`$, the integer $`a_\tau`$ is nonnegative. Put
 
 ```math
 b_n(\tau,p)=\min\{p,\ p^nK(n,a_\tau)\}.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 **Theorem 1 (adaptive endpoint-distillation converse).** Every protocol in the stated model with horizon $`H`$, fixed target size $`k\ge1`$, and trace-distance error $`0\le\varepsilon\le1/2`$ satisfies
@@ -26,14 +26,14 @@ b_n(\tau,p)=\min\{p,\ p^nK(n,a_\tau)\}.
 ```math
 (1-2\varepsilon)k-h_2(\varepsilon)
 \ \le\ H b_n(\tau,p),
-\tag{6}
+\qquad\text{(6)}
 ```
 
 where $`h_2`$ is the binary entropy. Consequently,
 
 ```math
 p^n\le R_n(\tau,p)\le b_n(\tau,p).
-\tag{7}
+\qquad\text{(7)}
 ```
 
 The result permits arbitrary noisy buffering, pipelining, selective discards, history-dependent cutoffs, nonstationary control and endpoint-distillation feedback. It does not assume independent waiting times selected by the controller or a renewal structure for the protocol.
@@ -44,7 +44,7 @@ Two direct consequences are
 0\lt \tau\le\frac1{\ln3}
 \quad\Longrightarrow\quad
 R_n(\tau,p)=p^n,
-\tag{8}
+\qquad\text{(8)}
 ```
 
 and, for fixed $`p\in(0,1)`$,
@@ -54,7 +54,7 @@ and, for fixed $`p\in(0,1)`$,
 \quad\Longrightarrow\quad
 \lim_{n\to\infty}-\frac1n\ln R_n(\tau_n,p)
 =\ln\frac1p.
-\tag{9}
+\qquad\text{(9)}
 ```
 
 The argument consists of a conditional quantum-state invariant, a source genealogy bound, and an entanglement budget for the endpoint laboratories.
@@ -66,9 +66,9 @@ The argument consists of a conditional quantum-state invariant, a source genealo
 The depolarizing semigroup acts on one half of (1) as
 
 ```math
-(\mathcal D_s\otimes\operatorname{id})[W(v)]
+(\mathcal D_s\otimes\mathrm{id})[W(v)]
 =W(ve^{-s/\tau}).
-\tag{10}
+\qquad\text{(10)}
 ```
 
 Independent exposure on both halves multiplies the visibility by the product of their attenuation factors.
@@ -78,7 +78,7 @@ For links on registers $`AB`$ and $`CD`$, let $`\mathcal B_m`$ denote the Bell m
 ```math
 \mathcal B_m\bigl(W(u)_{AB}\otimes W(v)_{CD}\bigr)
 =\frac14 W(uv)_{AD}.
-\tag{11}
+\qquad\text{(11)}
 ```
 
 The right side is subnormalized. In particular, every outcome has probability $`1/4`$, independent of $`u`$ and $`v`$, and the corrected conditional output is the same for all outcomes. One obtains (11) by expanding each input into its Bell and maximally mixed parts. The Bell-Bell term contributes $`\Phi_2/4`$. Each of the other three terms contributes $`I_4/16`$. Their coefficients sum to $`1-uv`$. This calculation uses the averaged density matrices and does not condition on an unobserved Pauli-error trajectory.
@@ -93,7 +93,7 @@ After every observed history $`h`$, the reduced state of the extracted endpoint 
 \Omega_h=
 \sigma_h\otimes
 \bigotimes_{\ell\in\mathcal L(h)}W(v_\ell(h)),
-\tag{12}
+\qquad\text{(12)}
 ```
 
 in the corrected Pauli frame. Here $`\sigma_h`$ is an arbitrary bipartite endpoint state, $`\mathcal L(h)`$ is the set of active links, and every visibility $`v_\ell(h)`$ is determined by the observed genealogy and exposure times. All unused local ancillas can be omitted. In particular, a complete link about to be extracted is conditionally independent of the previously extracted endpoint quantum systems and all other active links.
@@ -110,7 +110,7 @@ Extraction of $`\ell=[0,n]`$ removes its factor from the active set and changes 
 
 ```math
 \sigma'_h=\sigma_h\otimes W(v_\ell(h)).
-\tag{13}
+\qquad\text{(13)}
 ```
 
 Finally, consider an endpoint LOCC instrument with outcome $`y`$ and completely positive map $`\Lambda_{y|h}`$ on the extracted registers. Applied to (12), its unnormalized output is
@@ -118,10 +118,10 @@ Finally, consider an endpoint LOCC instrument with outcome $`y`$ and completely 
 ```math
 \Lambda_{y|h}(\sigma_h)\otimes
 \bigotimes_{\ell\in\mathcal L(h)}W(v_\ell(h)).
-\tag{14}
+\qquad\text{(14)}
 ```
 
-The outcome probability is $`\operatorname{Tr}\Lambda_{y|h}(\sigma_h)`$. Normalization changes only the endpoint factor, so (12) holds after adding $`y`$ to the transcript. The scheduler may then choose any allowed action from this enlarged history. A classical random choice that does not arise from a quantum measurement simply refines the transcript without changing the conditional quantum state; a choice produced by an endpoint measurement is already covered by (14).
+The outcome probability is $`\mathrm{Tr}\Lambda_{y|h}(\sigma_h)`$. Normalization changes only the endpoint factor, so (12) holds after adding $`y`$ to the transcript. The scheduler may then choose any allowed action from this enlarged history. A classical random choice that does not arise from a quantum measurement simply refines the transcript without changing the conditional quantum state; a choice produced by an endpoint measurement is already covered by (14).
 
 These events generate every finite protocol in the model, proving the invariant by induction. $`\square`$
 
@@ -142,24 +142,24 @@ s_i\ge\max(t_i,t_{i+1}),
 \qquad
 A=\sum_{i=1}^{n-1}(2s_i-t_i-t_{i+1})
 \ge\sum_{i=1}^{n-1}|t_i-t_{i+1}|.
-\tag{15}
+\qquad\text{(15)}
 ```
 
 The exposure $`A`$ counts every intermediate ancestral qubit's occupied time exactly once. It includes exposure incurred before and after remote swaps. Terminal storage contributes zero because the endpoint qubits are ideal. Applying (10) along each storage interval and (11) at each ancestral swap gives the extracted state
 
 ```math
 W(e^{-A/\tau}).
-\tag{16}
+\qquad\text{(16)}
 ```
 
 Equation (15) is valid for any real swap times. Define the source-profile total variation by
 
 ```math
-\operatorname{TV}(t)=\sum_{i=1}^{n-1}|t_i-t_{i+1}|.
-\tag{17}
+\mathrm{TV}(t)=\sum_{i=1}^{n-1}|t_i-t_{i+1}|.
+\qquad\text{(17)}
 ```
 
-Although $`A`$ can be real, $`\operatorname{TV}(t)`$ is an integer because source births are synchronized to integer slots.
+Although $`A`$ can be real, $`\mathrm{TV}(t)`$ is an integer because source births are synchronized to integer slots.
 
 ### The entanglement threshold
 
@@ -169,7 +169,7 @@ The partial transpose of $`W(v)`$ has eigenvalues $`(1+v)/4`$ with multiplicity 
 W(1/3)=\frac16\sum_{|\psi\rangle\in\mathcal S}
 |\psi\rangle\langle\psi|\otimes
 |\overline\psi\rangle\langle\overline\psi|,
-\tag{18}
+\qquad\text{(18)}
 ```
 
 where $`\mathcal S`$ contains the two eigenstates of each Pauli matrix and the bar denotes complex conjugation in the computational basis. For $`0\le v\le1/3`$,
@@ -182,30 +182,30 @@ is separable. Thus the raw density matrix (16), conditioned on its observed caus
 
 ```math
 A\lt \tau\ln3.
-\tag{19}
+\qquad\text{(19)}
 ```
 
 Every entangled raw delivery consequently has
 
 ```math
-\operatorname{TV}(t)\le A\lt \tau\ln3,
+\mathrm{TV}(t)\le A\lt \tau\ln3,
 \qquad
-\operatorname{TV}(t)\le a_\tau.
-\tag{20}
+\mathrm{TV}(t)\le a_\tau.
+\qquad\text{(20)}
 ```
 
 The final integer inequality, rather than an integer bound on $`A`$, explains the ceiling and the subtraction of one in (4).
 
 ## Counting potential successful profiles
 
-Independently sample $`X_{i,t}\sim\operatorname{Bernoulli}(p)`$ for every potential edge-slot trial, including trials that the controller never uses. Revealing $`X_{i,t}`$ only when that trial is chosen realizes exactly the stipulated source process. The variables remain independent on this underlying probability space even though the chosen trial indices and the delivered genealogies can be highly dependent.
+Independently sample $`X_{i,t}\sim\mathrm{Bernoulli}(p)`$ for every potential edge-slot trial, including trials that the controller never uses. Revealing $`X_{i,t}`$ only when that trial is chosen realizes exactly the stipulated source process. The variables remain independent on this underlying probability space even though the chosen trial indices and the delivered genealogies can be highly dependent.
 
 Let $`N_{\mathrm{ent}}(H)`$ count raw pairs extracted by time $`H`$ whose conditional state (16) is entangled. By Lemma 3, different extracted pairs have different source profiles. Every counted profile belongs to
 
 ```math
 \mathcal T_{H,a_\tau}=
 \{t\in\{1,\ldots,H\}^n:
-\operatorname{TV}(t)\le a_\tau\},
+\mathrm{TV}(t)\le a_\tau\},
 ```
 
 and every one of its source trials succeeded. Consequently the following is a pointwise inequality on the whole execution, before taking any expectation:
@@ -215,7 +215,7 @@ N_{\mathrm{ent}}(H)
 \le
 \sum_{t\in\mathcal T_{H,a_\tau}}
 \prod_{i=1}^{n}X_{i,t_i}.
-\tag{21}
+\qquad\text{(21)}
 ```
 
 It does not assert that a profile selected by the controller has probability $`p^n`$. Instead, each deterministic potential profile appearing on the right has that probability. Taking expectations therefore gives
@@ -223,7 +223,7 @@ It does not assert that a profile selected by the controller has probability $`p
 ```math
 \mathbb E N_{\mathrm{ent}}(H)
 \le p^n|\mathcal T_{H,a_\tau}|.
-\tag{22}
+\qquad\text{(22)}
 ```
 
 There are $`H`$ choices for $`t_1`$. For each choice, the integer increments $`z_i=t_{i+1}-t_i`$ satisfy $`\sum_i|z_i|\le a`$. Choosing their $`j`$ nonzero locations, their signs, and their positive magnitudes gives exactly
@@ -232,7 +232,7 @@ There are $`H`$ choices for $`t_1`$. For each choice, the integer increments $`z
 \left|\left\{z\in\mathbb Z^{n-1}:\|z\|_1\le a\right\}\right|
 =\sum_{j=0}^{\min(n-1,a)}2^j\binom{n-1}{j}\binom aj
 =K(n,a).
-\tag{23}
+\qquad\text{(23)}
 ```
 
 For fixed $`j`$, the number of positive integer $`j`$-tuples whose sum is at most $`a`$ is $`\binom aj`$. Some anchored increment vectors leave the interval $`\{1,\ldots,H\}`$, so allowing all of them is an overcount. Hence
@@ -242,7 +242,7 @@ For fixed $`j`$, the number of positive integer $`j`$-tuples whose sum is at mos
 \qquad
 \mathbb E N_{\mathrm{ent}}(H)
 \le Hp^nK(n,a_\tau).
-\tag{24}
+\qquad\text{(24)}
 ```
 
 Every raw delivery also consumes a distinct successful source trial on any fixed elementary edge. Thus
@@ -252,7 +252,7 @@ N_{\mathrm{ent}}(H)\le N_{\mathrm{raw}}(H)
 \le\sum_{t=1}^{H}X_{1,t},
 \qquad
 \mathbb E N_{\mathrm{ent}}(H)\le Hp.
-\tag{25}
+\qquad\text{(25)}
 ```
 
 Equations (24) and (25) give $`\mathbb E N_{\mathrm{ent}}(H)\le Hb_n`$. The source labels and the pointwise count are unaffected by leftover links or by preparing later links while an earlier pair is still being assembled. This is why the bound applies to steady operation as well as to protocols that reset globally.
@@ -263,15 +263,15 @@ For a finite-dimensional bipartite state $`\rho`$, the entanglement of formation
 
 ```math
 E_F(\rho)=\inf_{\rho=\sum_xq_x|\psi_x\rangle\langle\psi_x|}
-\sum_xq_x S\!\left(\operatorname{Tr}_B|\psi_x\rangle\langle\psi_x|\right).
-\tag{26}
+\sum_xq_x S\!\left(\mathrm{Tr}_B|\psi_x\rangle\langle\psi_x|\right).
+\qquad\text{(26)}
 ```
 
 We use convexity, monotonicity on average under LOCC instruments, and subadditivity,
 
 ```math
 E_F(\rho\otimes\omega)\le E_F(\rho)+E_F(\omega).
-\tag{27}
+\qquad\text{(27)}
 ```
 
 These standard properties follow from the convex-roof construction and entropy concavity; average monotonicity is covered by Vidal's convex-roof monotone theorem [V00](../references/RELATED_WORK.md#vidal00). Subadditivity follows directly by taking products of pure-state ensembles in (26). Additivity is not required. A separable state has zero entanglement of formation, and a two-qubit state has at most one ebit. Equations (18) and (19) therefore imply
@@ -279,7 +279,7 @@ These standard properties follow from the convex-roof construction and entropy c
 ```math
 E_F\bigl(W(e^{-A/\tau})\bigr)
 \le\mathbf1\{A\lt \tau\ln3\}.
-\tag{28}
+\qquad\text{(28)}
 ```
 
 Let $`\sigma_h`$ be the extracted endpoint factor in (12). At an extraction event, (13), (27), and (28) give
@@ -287,14 +287,14 @@ Let $`\sigma_h`$ be the extracted endpoint factor in (12). At an extraction even
 ```math
 E_F(\sigma'_h)
 \le E_F(\sigma_h)+\mathbf1\{A_h\lt \tau\ln3\}.
-\tag{29}
+\qquad\text{(29)}
 ```
 
 At an endpoint LOCC event with normalized conditional states $`\sigma_{hy}`$ and probabilities $`q(y|h)`$, average monotonicity gives
 
 ```math
 \sum_yq(y|h)E_F(\sigma_{hy})\le E_F(\sigma_h).
-\tag{30}
+\qquad\text{(30)}
 ```
 
 Other allowed network events leave the endpoint factor unchanged on every normalized child history. This includes stochastic source and Bell outcomes because of Lemma 2. Applying (29) and (30) successively on the finite execution tree, with terminated branches padded by identities, yields
@@ -302,7 +302,7 @@ Other allowed network events leave the endpoint factor unchanged on every normal
 ```math
 \sum_h\Pr(h)E_F(\sigma_h^{\mathrm{final}})
 \le \mathbb E N_{\mathrm{ent}}(H).
-\tag{31}
+\qquad\text{(31)}
 ```
 
 The initial value is zero because no shared endpoint entanglement is supplied. Discarding ancillary endpoint registers is local. Forgetting the classical transcript uses convexity. The averaged state of the fixed output registers therefore obeys
@@ -312,7 +312,7 @@ E_F\bigl(\rho^{(H)}_{A_HB_H}\bigr)
 \le\sum_h\Pr(h)E_F(\sigma_h^{\mathrm{final}})
 \le\mathbb E N_{\mathrm{ent}}(H)
 \le Hb_n(\tau,p).
-\tag{32}
+\qquad\text{(32)}
 ```
 
 In particular, a separable incoming raw pair cannot assist previous endpoint entanglement beyond this budget. It is important here that the incoming pair is a tensor factor conditional on the current history. Separability of each raw marginal alone would not establish (29) for a correlated stream.
@@ -323,7 +323,7 @@ For any bipartite state,
 
 ```math
 E_F(\rho)\ge -S(A|B)_\rho.
-\tag{33}
+\qquad\text{(33)}
 ```
 
 Indeed, conditional entropy is concave, and for each pure state $`\psi_x`$ in a decomposition of $`\rho`$, $`S(A|B)_{\psi_x}=-S(A)_{\psi_x}`$. Taking the infimum over decompositions proves (33).
@@ -331,9 +331,9 @@ Indeed, conditional entropy is concave, and for each pure state $`\psi_x`$ in a 
 Let $`\rho`$ be the state of the two $`d=2^k`$ dimensional target registers and suppose $`\frac12\|\rho-\Phi_d\|_1\le\varepsilon\le1/2`$. Measuring $`\{\Phi_d,I-\Phi_d\}`$ gives
 
 ```math
-F=\operatorname{Tr}(\Phi_d\rho),\qquad
+F=\mathrm{Tr}(\Phi_d\rho),\qquad
 \delta=1-F\le\varepsilon.
-\tag{34}
+\qquad\text{(34)}
 ```
 
 Apply the bilateral twirl $`U\otimes\overline U`$, using shared classical randomness. It is an LOCC channel and maps $`\rho`$ to the isotropic state [HHH99](../references/RELATED_WORK.md#horodecki99)
@@ -342,7 +342,7 @@ Apply the bilateral twirl $`U\otimes\overline U`$, using shared classical random
 \mathcal T_d(\rho)=
 (1-\delta)\Phi_d+
 \frac{\delta}{d^2-1}(I-\Phi_d).
-\tag{35}
+\qquad\text{(35)}
 ```
 
 The twirl has a finite convex realization by Carathéodory's theorem applied to the finite-dimensional space of channels, so a continuum of control outcomes is not needed. Its marginal on either endpoint is $`I_d/d`$, and its joint entropy is $`h_2(\delta)+\delta\log_2(d^2-1)`$. Equations (33), (35), and LOCC monotonicity imply
@@ -354,7 +354,7 @@ E_F(\rho)
 &\ge \log_2d-h_2(\delta)-\delta\log_2(d^2-1)\\
 &\ge (1-2\varepsilon)k-h_2(\varepsilon).
 \end{aligned}
-\tag{36}
+\qquad\text{(36)}
 ```
 
 The last inequality uses $`\delta\le\varepsilon\le1/2`$, the monotonicity of $`h_2`$ on this interval, and $`\log_2(d^2-1)\le2k`$. Only the fixed target registers appear, so the dimension of the endpoint ancillas does not enter.
@@ -366,7 +366,7 @@ There is also an explicit version for a reported success branch. If success has 
 ```math
 s\bigl[(1-2\varepsilon)k-h_2(\varepsilon)\bigr]
 \le Hb_n(\tau,p).
-\tag{37}
+\qquad\text{(37)}
 ```
 
 Thus rare postselection is charged by its probability. Conditioning on success alone cannot be substituted for the unconditional rate definition (3).
@@ -381,7 +381,7 @@ For general $`a\ge0`$, at most $`a`$ increments in (23) can be nonzero. Their si
 
 ```math
 K(n,a)\le2^a\binom{n+a-1}{a}.
-\tag{38}
+\qquad\text{(38)}
 ```
 
 If $`a=o(n)`$ and $`a\ge1`$,
@@ -389,7 +389,7 @@ If $`a=o(n)`$ and $`a\ge1`$,
 ```math
 \ln K(n,a)
 \le a\ln2+a\ln\!\left(\frac{e(n+a-1)}a\right)=o(n).
-\tag{39}
+\qquad\text{(39)}
 ```
 
 For $`a=0`$, the same conclusion is immediate. Since $`\tau_n=o(n)`$ implies $`a_{\tau_n}=o(n)`$, (7) gives

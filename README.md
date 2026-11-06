@@ -23,7 +23,7 @@ Thus every sublinear memory lifetime has the same leading rate exponent as requi
 Every delivered pair has one elementary source leaf on each edge, with birth times $`t_1,\ldots,t_n`$. Its accumulated interior exposure is at least
 
 ```math
-\operatorname{TV}(t)=\sum_{i=1}^{n-1}|t_{i+1}-t_i|.
+\mathrm{TV}(t)=\sum_{i=1}^{n-1}|t_{i+1}-t_i|.
 ```
 
 The corrected raw state has visibility $`e^{-A/\tau}`$ and is separable when $`A\ge\tau\ln3`$. Entangled deliveries must therefore come from a small set of source-time profiles. Each fixed profile requires $`n`$ independent successes. A pointwise count of all potentially successful profiles avoids assuming that profiles selected by an adaptive controller are independent.
@@ -70,6 +70,7 @@ The noise channel matters. With pure phase dephasing and the same coherence atte
 
 | Goal | Route |
 | --- | --- |
+| Learn the project from its foundations | [Learning guide](learning/README.md), [source bridge](learning/SOURCE_BRIDGE.md), [30 milestones](learning/MILESTONES.md) and [worked tutorial](learning/TUTORIAL.md) |
 | Understand the physical question and its limits | [Interpretation](science/interpretation.md), then [model](science/model.md) |
 | Check the theorem | [Model](science/model.md), [adaptive converse](science/adaptive_converse.md), [finite bounds](science/finite_bounds.md) |
 | Check the constructions and noise distinction | [Achievability](science/achievability.md), then [noise comparison](science/noise_comparison.md) |
@@ -77,6 +78,8 @@ The noise channel matters. With pure phase dephasing and the same coherence atte
 | Compare with prior work | [Related work](references/RELATED_WORK.md) and [bibliography](references/references.bib) |
 
 The [science map](science/README.md) identifies the authoritative page for each claim. The [machine-readable reading map](llms.txt) provides the same boundaries for assisted study.
+
+The learning route uses one educational anchor, Wilde's author notes dated 5 December 2021, with version-specific section pointers and locally supplied explanations of the adaptive repeater argument. The shared milestone map describes the project's understanding targets and dependencies.
 
 ## Relation to prior work
 

@@ -47,7 +47,7 @@ All failed slots have been included in that mean duration.
 Within a cycle, attempt each unfinished edge until its first success. Write the resulting iid success times as
 
 ```math
-G_1,\ldots,G_n\sim\operatorname{Geom}(p),
+G_1,\ldots,G_n\sim\mathrm{Geom}(p),
 \qquad \Pr(G_i=t)=p(1-p)^{t-1},\quad t=1,2,\ldots.
 ```
 

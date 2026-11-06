@@ -1,0 +1,538 @@
+{
+  "constants": {
+    "p": 0.5,
+    "roughness_mean": 1.3333333333333333,
+    "converse_alpha_threshold": 0.21402871263075762,
+    "converse_kappa_threshold": 0.19481732986095843,
+    "sufficient_two_way_kappa": 1.2136523021691163,
+    "hashing_visibility_threshold": 0.7476138334463613,
+    "sufficient_direct_hash_kappa": 4.583969792598662,
+    "notes": "Thresholds delimit proved regions; the intervening frontier is open. Time-support error bounds do not enclose binary64 roundoff."
+  },
+  "weighted_example": {
+    "n": 10,
+    "p": 0.5,
+    "tau": 1.0,
+    "synchronized_lower": 0.0009765625,
+    "unweighted_upper": 0.0185546875,
+    "weighted_upper": 0.0011180486152732867
+  },
+  "analytic_recursion_checks": [
+    {
+      "n": 2,
+      "p": 0.5,
+      "tau": 0.3,
+      "analytic": 0.3454406221188785,
+      "transfer": 0.34544062211887855,
+      "omitted_probability": 7.105427357600989e-15,
+      "discrepancy": 5.551115123125783e-17
+    },
+    {
+      "n": 2,
+      "p": 0.5,
+      "tau": 1.0,
+      "analytic": 0.4835997823737093,
+      "transfer": 0.4835997823737094,
+      "omitted_probability": 7.105427357600989e-15,
+      "discrepancy": 5.551115123125783e-17
+    },
+    {
+      "n": 2,
+      "p": 0.5,
+      "tau": 7.0,
+      "analytic": 0.8433565688752411,
+      "transfer": 0.8433565688752411,
+      "omitted_probability": 7.105427357600989e-15,
+      "discrepancy": 0.0
+    }
+  ],
+  "small_exact_counts": [
+    {
+      "n": 2,
+      "a": 0,
+      "K": 1
+    },
+    {
+      "n": 2,
+      "a": 1,
+      "K": 3
+    },
+    {
+      "n": 2,
+      "a": 2,
+      "K": 5
+    },
+    {
+      "n": 2,
+      "a": 3,
+      "K": 7
+    },
+    {
+      "n": 2,
+      "a": 5,
+      "K": 11
+    },
+    {
+      "n": 4,
+      "a": 0,
+      "K": 1
+    },
+    {
+      "n": 4,
+      "a": 1,
+      "K": 7
+    },
+    {
+      "n": 4,
+      "a": 2,
+      "K": 25
+    },
+    {
+      "n": 4,
+      "a": 3,
+      "K": 63
+    },
+    {
+      "n": 4,
+      "a": 5,
+      "K": 231
+    },
+    {
+      "n": 8,
+      "a": 0,
+      "K": 1
+    },
+    {
+      "n": 8,
+      "a": 1,
+      "K": 15
+    },
+    {
+      "n": 8,
+      "a": 2,
+      "K": 113
+    },
+    {
+      "n": 8,
+      "a": 3,
+      "K": 575
+    },
+    {
+      "n": 8,
+      "a": 5,
+      "K": 7183
+    }
+  ],
+  "sublinear_exponent_bounds": [
+    {
+      "n": 16,
+      "p": 0.5,
+      "tau": 4.0,
+      "strict_tv_budget": 4,
+      "log10_K": 4.591520933198543,
+      "log10_depol_lower": -4.816479930623698,
+      "log10_depol_upper": -0.30102999566398114,
+      "depol_exponent_lower": 0.04332169878499658,
+      "depol_exponent_upper": 0.6931471805599453,
+      "phase_exponent_upper": 0.6931471805599453,
+      "log10_phase_lower": -4.816479930623698,
+      "cycle_mean_upper": 5.377377901752758
+    },
+    {
+      "n": 32,
+      "p": 0.5,
+      "tau": 5.656854249492381,
+      "strict_tv_budget": 6,
+      "log10_K": 7.944699612208727,
+      "log10_depol_lower": -9.632959861247397,
+      "log10_depol_upper": -1.6882602490386707,
+      "depol_exponent_lower": 0.12148009007908933,
+      "depol_exponent_upper": 0.6931471805599453,
+      "phase_exponent_upper": 0.5246701243472979,
+      "log10_phase_lower": -7.291562874352781,
+      "cycle_mean_upper": 6.355175845103938
+    },
+    {
+      "n": 64,
+      "p": 0.5,
+      "tau": 8.0,
+      "strict_tv_budget": 8,
+      "log10_K": 12.228669638415877,
+      "log10_depol_lower": -19.265919722494793,
+      "log10_depol_upper": -7.037250084078917,
+      "depol_exponent_lower": 0.25318542405111266,
+      "depol_exponent_upper": 0.6931471805599453,
+      "phase_exponent_upper": 0.3643830718316319,
+      "log10_phase_lower": -10.127971673307773,
+      "cycle_mean_upper": 7.343990334773384
+    },
+    {
+      "n": 128,
+      "p": 0.5,
+      "tau": 11.313708498984761,
+      "strict_tv_budget": 12,
+      "log10_K": 20.201519414547914,
+      "log10_depol_lower": -38.531839444989586,
+      "log10_depol_upper": -18.330320030441676,
+      "depol_exponent_lower": 0.32974313790550913,
+      "depol_exponent_upper": 0.6931471805599453,
+      "phase_exponent_upper": 0.25298195166753507,
+      "log10_phase_lower": -14.06318920068168,
+      "cycle_mean_upper": 8.33837608377475
+    },
+    {
+      "n": 256,
+      "p": 0.5,
+      "tau": 16.0,
+      "strict_tv_budget": 17,
+      "log10_K": 31.494572822371982,
+      "log10_depol_lower": -77.06367888997917,
+      "log10_depol_upper": -45.569106067607194,
+      "depol_exponent_lower": 0.40987009504819083,
+      "depol_exponent_upper": 0.6931471805599453,
+      "phase_exponent_upper": 0.17601744298469263,
+      "log10_phase_lower": -19.569511476984896,
+      "cycle_mean_upper": 9.335563543975333
+    },
+    {
+      "n": 512,
+      "p": 0.5,
+      "tau": 22.627416997969522,
+      "strict_tv_budget": 24,
+      "log10_K": 48.44610314471781,
+      "log10_depol_lower": -154.12735777995834,
+      "log10_depol_upper": -105.68125463524055,
+      "depol_exponent_lower": 0.4752735967422125,
+      "depol_exponent_upper": 0.6931471805599453,
+      "phase_exponent_upper": 0.1228203443525331,
+      "log10_phase_lower": -27.310181282694316,
+      "cycle_mean_upper": 10.334155916428271
+    },
+    {
+      "n": 1024,
+      "p": 0.5,
+      "tau": 32.0,
+      "strict_tv_budget": 35,
+      "log10_K": 75.87630988243293,
+      "log10_depol_lower": -308.2547155599167,
+      "log10_depol_upper": -232.37840567748376,
+      "depol_exponent_lower": 0.5225303250456026,
+      "depol_exponent_upper": 0.6931471805599453,
+      "phase_exponent_upper": 0.08594178998586934,
+      "log10_phase_lower": -38.219822239489226,
+      "cycle_mean_upper": 11.333451762795894
+    },
+    {
+      "n": 2048,
+      "p": 0.5,
+      "tau": 45.254833995939045,
+      "strict_tv_budget": 49,
+      "log10_K": 114.21732117938035,
+      "log10_depol_lower": -616.5094311198334,
+      "log10_depol_upper": -502.2921099404531,
+      "depol_exponent_lower": 0.5647316038463934,
+      "depol_exponent_upper": 0.6931471805599453,
+      "phase_exponent_upper": 0.06028298471186853,
+      "log10_phase_lower": -53.61780247147026,
+      "cycle_mean_upper": 12.333099600962887
+    },
+    {
+      "n": 4096,
+      "p": 0.5,
+      "tau": 64.0,
+      "strict_tv_budget": 70,
+      "log10_K": 173.85590403822567,
+      "log10_depol_lower": -1233.0188622396668,
+      "log10_depol_upper": -1059.1629582014414,
+      "depol_exponent_lower": 0.5954132906753209,
+      "depol_exponent_upper": 0.6931471805599453,
+      "phase_exponent_upper": 0.04236862077328141,
+      "log10_phase_lower": -75.36827681868841,
+      "cycle_mean_upper": 13.332923498785895
+    },
+    {
+      "n": 8192,
+      "p": 0.5,
+      "tau": 90.50966799187809,
+      "strict_tv_budget": 99,
+      "log10_K": 261.2554614578146,
+      "log10_depol_lower": -2466.0377244793335,
+      "log10_depol_upper": -2204.7822630215187,
+      "depol_exponent_lower": 0.6197142055824008,
+      "depol_exponent_upper": 0.6931471805599453,
+      "phase_exponent_upper": 0.02982407705228041,
+      "log10_phase_lower": -106.1063236949015,
+      "cycle_mean_upper": 14.332835442381507
+    },
+    {
+      "n": 16384,
+      "p": 0.5,
+      "tau": 128.0,
+      "strict_tv_budget": 140,
+      "log10_K": 391.03239138686087,
+      "log10_depol_lower": -4932.075448958667,
+      "log10_depol_upper": -4541.0430575718065,
+      "depol_exponent_lower": 0.6381920197149014,
+      "depol_exponent_upper": 0.6931471805599453,
+      "phase_exponent_upper": 0.021018623536653718,
+      "log10_phase_lower": -149.5576120388898,
+      "cycle_mean_upper": 15.332791412850245
+    }
+  ],
+  "asap_noise_comparison": [
+    {
+      "n": 16,
+      "p": 0.5,
+      "lifetime": "sqrt(n)",
+      "tau": 4.0,
+      "visibility_truncated": 0.02246149898637373,
+      "visibility_upper": 0.022461498986380835,
+      "visibility_support_error": 7.105427357600978e-15,
+      "time_cutoff": 51,
+      "cycle_mean": 5.377377901752751,
+      "cycle_mean_tail": 7.105427357601002e-15,
+      "depol_hash_yield": 0.0,
+      "depol_recurrence_hash_yield": 0.0,
+      "recurrence_rounds": 0,
+      "phase_hash_yield": 0.000363964092082987,
+      "depol_hash_rate": 0.0,
+      "depol_recurrence_hash_rate": 0.0,
+      "phase_hash_rate": 6.768430613075432e-05
+    },
+    {
+      "n": 16,
+      "p": 0.5,
+      "lifetime": "2n",
+      "tau": 32,
+      "visibility_truncated": 0.5487776119321772,
+      "visibility_upper": 0.5487776119321843,
+      "visibility_support_error": 7.105427357600978e-15,
+      "time_cutoff": 51,
+      "cycle_mean": 5.377377901752751,
+      "cycle_mean_tail": 7.105427357601002e-15,
+      "depol_hash_yield": 0.0,
+      "depol_recurrence_hash_yield": 0.0006340274957288553,
+      "recurrence_rounds": 5,
+      "phase_hash_yield": 0.22971817933696456,
+      "depol_hash_rate": 0.0,
+      "depol_recurrence_hash_rate": 0.00011790644200813819,
+      "phase_hash_rate": 0.0427193668613262
+    },
+    {
+      "n": 16,
+      "p": 0.5,
+      "lifetime": "8n",
+      "tau": 128,
+      "visibility_truncated": 0.8567317039982261,
+      "visibility_upper": 0.8567317039982332,
+      "visibility_support_error": 7.105427357600978e-15,
+      "time_cutoff": 51,
+      "cycle_mean": 5.377377901752751,
+      "cycle_mean_tail": 7.105427357601002e-15,
+      "depol_hash_yield": 0.3375139617393589,
+      "depol_recurrence_hash_yield": 0.3375139617393591,
+      "recurrence_rounds": 0,
+      "phase_hash_yield": 0.6280074088652813,
+      "depol_hash_rate": 0.06276552771739291,
+      "depol_recurrence_hash_rate": 0.06276552771739295,
+      "phase_hash_rate": 0.11678692112387751
+    },
+    {
+      "n": 64,
+      "p": 0.5,
+      "lifetime": "sqrt(n)",
+      "tau": 8.0,
+      "visibility_truncated": 0.0001224524796612086,
+      "visibility_upper": 0.00012245247966831402,
+      "visibility_support_error": 7.105427357600977e-15,
+      "time_cutoff": 53,
+      "cycle_mean": 7.343990334773377,
+      "cycle_mean_tail": 7.105427357601002e-15,
+      "depol_hash_yield": 0.0,
+      "depol_recurrence_hash_yield": 0.0,
+      "recurrence_rounds": 0,
+      "phase_hash_yield": 1.081632460838884e-08,
+      "depol_hash_rate": 0.0,
+      "depol_recurrence_hash_rate": 0.0,
+      "phase_hash_rate": 1.4728130233470145e-09
+    },
+    {
+      "n": 64,
+      "p": 0.5,
+      "lifetime": "2n",
+      "tau": 128,
+      "visibility_truncated": 0.5224071213702045,
+      "visibility_upper": 0.5224071213702116,
+      "visibility_support_error": 7.105427357600977e-15,
+      "time_cutoff": 53,
+      "cycle_mean": 7.343990334773377,
+      "cycle_mean_tail": 7.105427357601002e-15,
+      "depol_hash_yield": 0.0,
+      "depol_recurrence_hash_yield": 0.0002883178580202177,
+      "recurrence_rounds": 6,
+      "phase_hash_yield": 0.2069669351914003,
+      "depol_hash_rate": 0.0,
+      "depol_recurrence_hash_rate": 3.925901926300866e-05,
+      "phase_hash_rate": 0.028181809310317774
+    },
+    {
+      "n": 64,
+      "p": 0.5,
+      "lifetime": "8n",
+      "tau": 512,
+      "visibility_truncated": 0.8490609873980735,
+      "visibility_upper": 0.8490609873980806,
+      "visibility_support_error": 7.105427357600977e-15,
+      "time_cutoff": 53,
+      "cycle_mean": 7.343990334773377,
+      "cycle_mean_tail": 7.105427357601002e-15,
+      "depol_hash_yield": 0.3110695391321321,
+      "depol_recurrence_hash_yield": 0.3110695391321323,
+      "recurrence_rounds": 0,
+      "phase_hash_yield": 0.6139890222450675,
+      "depol_hash_rate": 0.04235701913430294,
+      "depol_recurrence_hash_rate": 0.042357019134302974,
+      "phase_hash_rate": 0.08360427972486072
+    },
+    {
+      "n": 256,
+      "p": 0.5,
+      "lifetime": "sqrt(n)",
+      "tau": 16.0,
+      "visibility_truncated": 3.0930550694908023e-09,
+      "visibility_upper": 3.09306217491816e-09,
+      "visibility_support_error": 7.105427357600977e-15,
+      "time_cutoff": 55,
+      "cycle_mean": 9.335563543975326,
+      "cycle_mean_tail": 7.105427357601002e-15,
+      "depol_hash_yield": 0.0,
+      "depol_recurrence_hash_yield": 0.0,
+      "recurrence_rounds": 0,
+      "phase_hash_yield": 6.9011242714528885e-18,
+      "depol_hash_rate": 0.0,
+      "depol_recurrence_hash_rate": 0.0,
+      "phase_hash_rate": 7.392295322017813e-19
+    },
+    {
+      "n": 256,
+      "p": 0.5,
+      "lifetime": "2n",
+      "tau": 512,
+      "visibility_truncated": 0.515674138852995,
+      "visibility_upper": 0.5156741388530021,
+      "visibility_support_error": 7.105427357600977e-15,
+      "time_cutoff": 55,
+      "cycle_mean": 9.335563543975326,
+      "cycle_mean_tail": 7.105427357601002e-15,
+      "depol_hash_yield": 0.0,
+      "depol_recurrence_hash_yield": 0.000223132864734033,
+      "recurrence_rounds": 6,
+      "phase_hash_yield": 0.2013813063257537,
+      "depol_hash_rate": 0.0,
+      "depol_recurrence_hash_rate": 2.3901381387739668e-05,
+      "phase_hash_rate": 0.02157141402092585
+    },
+    {
+      "n": 256,
+      "p": 0.5,
+      "lifetime": "8n",
+      "tau": 2048,
+      "visibility_truncated": 0.8471275965152658,
+      "visibility_upper": 0.8471275965152729,
+      "visibility_support_error": 7.105427357600977e-15,
+      "time_cutoff": 55,
+      "cycle_mean": 9.335563543975326,
+      "cycle_mean_tail": 7.105427357601002e-15,
+      "depol_hash_yield": 0.3044801727459223,
+      "depol_recurrence_hash_yield": 0.3044801727459221,
+      "recurrence_rounds": 0,
+      "phase_hash_yield": 0.6105042784679965,
+      "depol_hash_rate": 0.03261508224025933,
+      "depol_recurrence_hash_rate": 0.0326150822402593,
+      "phase_hash_rate": 0.06539554635263373
+    }
+  ],
+  "linear_coefficient_bounds": [
+    {
+      "p": 0.5,
+      "kappa": 0.1,
+      "asymptotic_converse_exponent": 0.26439313390767627,
+      "uniform_visibility_lower": 1.6195967923126127e-06,
+      "uniform_recurrence_hash_yield": 0.0,
+      "recurrence_rounds": 0,
+      "uniform_direct_hash_yield": 0.0
+    },
+    {
+      "p": 0.5,
+      "kappa": 0.2,
+      "asymptotic_converse_exponent": 0,
+      "uniform_visibility_lower": 0.001272633801339809,
+      "uniform_recurrence_hash_yield": 0.0,
+      "recurrence_rounds": 0,
+      "uniform_direct_hash_yield": 0.0
+    },
+    {
+      "p": 0.5,
+      "kappa": 0.5,
+      "asymptotic_converse_exponent": 0,
+      "uniform_visibility_lower": 0.06948345122280154,
+      "uniform_recurrence_hash_yield": 0.0,
+      "recurrence_rounds": 0,
+      "uniform_direct_hash_yield": 0.0
+    },
+    {
+      "p": 0.5,
+      "kappa": 1.0,
+      "asymptotic_converse_exponent": 0,
+      "uniform_visibility_lower": 0.26359713811572677,
+      "uniform_recurrence_hash_yield": 0.0,
+      "recurrence_rounds": 0,
+      "uniform_direct_hash_yield": 0.0
+    },
+    {
+      "p": 0.5,
+      "kappa": 1.25,
+      "asymptotic_converse_exponent": 0,
+      "uniform_visibility_lower": 0.34415378686541237,
+      "uniform_recurrence_hash_yield": 1.3030565482893012e-12,
+      "recurrence_rounds": 21,
+      "uniform_direct_hash_yield": 0.0
+    },
+    {
+      "p": 0.5,
+      "kappa": 1.5,
+      "asymptotic_converse_exponent": 0,
+      "uniform_visibility_lower": 0.41111229050718745,
+      "uniform_recurrence_hash_yield": 9.268135651293471e-07,
+      "recurrence_rounds": 11,
+      "uniform_direct_hash_yield": 0.0
+    },
+    {
+      "p": 0.5,
+      "kappa": 2.0,
+      "asymptotic_converse_exponent": 0,
+      "uniform_visibility_lower": 0.513417119032592,
+      "uniform_recurrence_hash_yield": 0.0002021701168354502,
+      "recurrence_rounds": 6,
+      "uniform_direct_hash_yield": 0.0
+    },
+    {
+      "p": 0.5,
+      "kappa": 4.0,
+      "asymptotic_converse_exponent": 0,
+      "uniform_visibility_lower": 0.7165313105737893,
+      "uniform_recurrence_hash_yield": 0.030743553290885652,
+      "recurrence_rounds": 2,
+      "uniform_direct_hash_yield": 0.0
+    },
+    {
+      "p": 0.5,
+      "kappa": 8.0,
+      "asymptotic_converse_exponent": 0,
+      "uniform_visibility_lower": 0.8464817248906141,
+      "uniform_recurrence_hash_yield": 0.3022855939043245,
+      "recurrence_rounds": 0,
+      "uniform_direct_hash_yield": 0.3022855939043245
+    }
+  ]
+}

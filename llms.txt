@@ -1,0 +1,29 @@
+# Quantum Repeater Memory Limits
+
+This repository studies the distilled-ebit rate of a line of independent elementary sources joined by Bell swaps through noisy unencoded memories. Read assumptions before extrapolating a theorem to another repeater architecture.
+
+## Start
+- README.md: question, main exponent, finite envelope, constructions and reading routes.
+- science/README.md: claim-to-file map.
+
+## Scientific authority
+- science/model.md: permitted sources, independent product depolarization, controls, endpoint interface and operational rate. This is the authority for scope.
+- science/adaptive_converse.md: full proof, including causal conditioning, lineage injection, integer total-variation cutoff and entanglement-of-formation budget.
+- science/finite_bounds.md: weighted finite bound, exact synchronized regime, lattice entropy and unresolved linear-coefficient interval.
+- science/achievability.md: deterministic-horizon timing lemma, synchronized protocol, ASAP/reset protocol and recurrence-plus-hashing sufficiency.
+- science/noise_comparison.md: independent phase channel, achievable rate and different leading exponent at the same lifetime.
+- science/interpretation.md: physical meaning, bandwidth distinction and excluded extensions.
+
+## Evidence
+- references/RELATED_WORK.md: primary-source attribution and comparison. Do not infer unrestricted priority from the comparison.
+- references/references.bib: bibliographic records.
+- verification/README.md: exact reproduction commands, observed supporting checks and numerical limitations.
+
+## Study routes
+- Story: README.md -> science/interpretation.md -> science/model.md.
+- Theorem: science/model.md -> science/adaptive_converse.md -> science/finite_bounds.md.
+- Constructions: science/achievability.md -> science/noise_comparison.md.
+- Reproduction: verification/README.md -> scripts and recorded outputs named there.
+
+## Boundaries
+The result does not include intermediate purification, encoded storage, quantum reinjection, common hidden memory noise or source pairs correlated with existing systems. Unbounded equally noisy buffers are included; growing source-attempt bandwidth is a different resource model. Fixed-horizon errors include failure and abort branches. Linear-coefficient bounds are sufficient regions, not a proved exact phase boundary. Numerical zero lower bounds do not prove zero optimal rate.

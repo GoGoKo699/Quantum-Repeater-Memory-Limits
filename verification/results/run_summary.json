@@ -1,0 +1,51 @@
+{
+  "python_version": "3.12.14",
+  "implementation": "CPython",
+  "packages": {
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8"
+  },
+  "plot_requested": true,
+  "commands": [
+    {
+      "command": "python verification/check_repeater_small.py",
+      "returncode": 0,
+      "log": "verification/results/check_repeater_small.log"
+    },
+    {
+      "command": "python verification/check_finite_bounds.py",
+      "returncode": 0,
+      "log": "verification/results/check_finite_bounds.log"
+    },
+    {
+      "command": "python verification/repeater_bounds.py --plot",
+      "returncode": 0,
+      "log": "verification/results/repeater_bounds.log"
+    }
+  ],
+  "results": {
+    "integer_profile_cases": 25,
+    "exact_threshold_cases": 8,
+    "swap_parameter_cases": 6,
+    "bell_outcome_branches": 60,
+    "largest_frobenius_state_error": 2.220446049250313e-16,
+    "largest_outcome_probability_error": 2.220446049250313e-16,
+    "finite_shell_entropy_cases": 1275,
+    "largest_log_bound_excess": 0.0,
+    "analytic_visibility_cases": 3,
+    "largest_visibility_discrepancy": 5.551115123125783e-17,
+    "sublinear_exponent_rows": 11,
+    "asap_noise_rows": 9,
+    "linear_coefficient_rows": 9,
+    "weighted_bound_example": {
+      "n": 10,
+      "p": 0.5,
+      "tau": 1.0,
+      "a": 1,
+      "synchronized_lower": 0.0009765625,
+      "unweighted_upper": 0.0185546875,
+      "weighted_upper": 0.0011180486152732993,
+      "weighted_to_lower_ratio": 1.1448817820398585
+    }
+  }
+}

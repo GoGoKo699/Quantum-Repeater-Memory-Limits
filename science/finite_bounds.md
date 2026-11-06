@@ -17,16 +17,16 @@ W(v)=v\Phi_2+(1-v)\frac{I_4}{4}.
 For a delivered pair with elementary source times $`t_1,\ldots,t_n`$, its accumulated interior exposure satisfies
 
 ```math
-A\ge\operatorname{TV}(t)
+A\ge\mathrm{TV}(t)
 =\sum_{i=1}^{n-1}|t_i-t_{i+1}|.
 ```
 
 Its conditional state is $`W(e^{-A/\tau})`$, which is entangled exactly when $`A\lt\tau\ln3`$. Source times are integer slot indices. Consequently,
 
 ```math
-\operatorname{TV}(t)\le A\lt\tau\ln3
+\mathrm{TV}(t)\le A\lt\tau\ln3
 \quad\Longrightarrow\quad
-\operatorname{TV}(t)\le a_\tau.
+\mathrm{TV}(t)\le a_\tau.
 ```
 
 The integer cutoff applies to source-time variation. Swap times and the total exposure $`A`$ may be real.
@@ -170,8 +170,8 @@ z_\alpha=\frac{\alpha}{\sqrt{1+\alpha^2}+1},
 where
 
 ```math
-f(\alpha)=\operatorname{arsinh}(\alpha)
- +\alpha\operatorname{arsinh}(1/\alpha),
+f(\alpha)=\mathrm{arsinh}(\alpha)
+ +\alpha\mathrm{arsinh}(1/\alpha),
 \qquad f(0)=0.
 ```
 
@@ -242,10 +242,10 @@ The factor $`H`$ used to anchor a profile can be sharpened when the horizon is s
 S_0=0,
 \qquad S_j=\sum_{i=1}^j d_i,
 \qquad
-\operatorname{span}(d)=\max_jS_j-\min_jS_j.
+\mathrm{span}(d)=\max_jS_j-\min_jS_j.
 ```
 
-Exactly $`(H-\operatorname{span}(d))_+`$ choices of the first source time place the whole profile in slots $`1,\ldots,H`$. Thus the finite weighted target bound can be strengthened to
+Exactly $`(H-\mathrm{span}(d))_+`$ choices of the first source time place the whole profile in slots $`1,\ldots,H`$. Thus the finite weighted target bound can be strengthened to
 
 ```math
 (1-2\varepsilon)k-h_2(\varepsilon)
@@ -253,7 +253,7 @@ Exactly $`(H-\operatorname{span}(d))_+`$ choices of the first source time place 
 \min\!\left\{
 Hp,
 p^n\!\sum_{\|d\|_1\le a_\tau}
-(H-\operatorname{span}(d))_+
+(H-\mathrm{span}(d))_+
 e_\tau(\|d\|_1)
 \right\}.
 ```

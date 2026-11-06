@@ -1,6 +1,8 @@
 # Reproducible finite checks
 
-Three standalone programs check the finite combinatorics, local noisy Bell swaps, and numerical bound calculations used in this repository. They use no Monte Carlo or external data. The analytical claims are proved in the [science pages](../science/model.md); these checks do not certify the all-policy converse or the endpoint-distillation argument.
+Three standalone programs check the finite combinatorics, local noisy Bell swaps, and numerical bound calculations used in this repository. They use no Monte Carlo or external data. The analytical claims are proved in the [science pages](../science/README.md); these checks do not certify the all-policy converse or the endpoint-distillation argument.
+
+The separate [hosted mathematics check](hosted/README.md) compares actual GitHub rendering with the pinned Markdown source. Its structural report and screenshots concern presentation, independently of the numerical checks below.
 
 ## Run
 
@@ -53,7 +55,7 @@ The figure displays bounds on normalized loss exponents, not optimized rate esti
 
 ## Assumptions and numerical limits
 
-The calculation uses the [stated Bell-link model](../science/model.md): independent Bernoulli elementary generation, independent Markov memory noise, ideal swaps, ideal endpoint storage, and the allowed endpoint processing. The ASAP calculation uses iid first-success times $`G_i\sim\operatorname{Geom}(p)`$, with support starting at one, cycle duration $`\max_iG_i`$, and roughness $`\sum_i|G_i-G_{i+1}|`$. It does not optimize over scheduling policies.
+The calculation uses the [stated Bell-link model](../science/model.md): independent Bernoulli elementary generation, independent Markov memory noise, ideal swaps, ideal endpoint storage, and the allowed endpoint processing. The ASAP calculation uses iid first-success times $`G_i\sim\mathrm{Geom}(p)`$, with support starting at one, cycle duration $`\max_iG_i`$, and roughness $`\sum_i|G_i-G_{i+1}|`$. It does not optimize over scheduling policies.
 
 Integer profile and shell counts use arbitrary-precision integer arithmetic. The strict cutoff is
 

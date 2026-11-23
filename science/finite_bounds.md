@@ -115,10 +115,10 @@ R_n(\tau,p)
 
 **Proof.** The conditional product invariant in the [adaptive converse](adaptive_converse.md) makes each incoming raw pair a tensor factor of the endpoint state, conditional on the causal classical history. Subadditivity of $`E_F`$ bounds the increase upon arrival by that pair's $`E_F`$; endpoint LOCC cannot increase the expected budget.
 
-If a raw pair has source increment vector $`d`$, then $`A\ge\|d\|_1`$ and therefore
+If a raw pair has source increment vector $`d`$, then $`A\ge\lVert d\rVert_1`$ and therefore
 
 ```math
-E_F(W(e^{-A/\tau}))\le e_\tau(\|d\|_1).
+E_F(W(e^{-A/\tau}))\le e_\tau(\lVert d\rVert_1).
 ```
 
 Different raw outputs consume different source tuples. Thus their total entanglement charge is bounded, for every execution, by the sum of these weights over all successful potential source profiles. Each deterministic profile requires one independent source success on every edge and has probability $`p^n`$. There are at most $`H g_L(m)`$ profiles of radius $`m`$. Taking expectations gives the budget $`H p^nQ_L(\tau)`$. Charging every raw pair to a distinct source success on one fixed edge also gives $`Hp`$. The fixed-target entanglement lower bound from the adaptive converse completes the proof.
@@ -149,7 +149,7 @@ The weighted upper bound is a factor $`1.1448818`$ above synchronized generation
 For $`L\ge1`$ and $`0\lt z\lt1`$,
 
 ```math
-\sum_{d\in\mathbb Z^L}z^{\|d\|_1}
+\sum_{d\in\mathbb Z^L}z^{\lVert d\rVert_1}
 =\left(\frac{1+z}{1-z}\right)^L.
 ```
 
@@ -254,9 +254,9 @@ Exactly $`(H-\mathrm{span}(d))_+`$ choices of the first source time place the wh
 \le
 \min\!\left\{
 Hp,
-p^n\!\sum_{\|d\|_1\le a_\tau}
+p^n\!\sum_{\lVert d\rVert_1\le a_\tau}
 (H-\mathrm{span}(d))_+
-e_\tau(\|d\|_1)
+e_\tau(\lVert d\rVert_1)
 \right\}.
 ```
 

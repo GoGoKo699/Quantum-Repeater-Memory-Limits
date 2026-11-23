@@ -317,17 +317,17 @@ The single educational anchor is **Mark M. Wilde, *From Classical to Quantum Sha
 **Source pointers.** Local weighted envelope: [finite bounds, §2](../science/finite_bounds.md#2-an-entanglement-weighted-envelope) and [the finite example](../science/finite_bounds.md#3-a-finite-example). Primary exact two-qubit ingredient: [Wootters98](../references/RELATED_WORK.md#wootters98).
 
 <a id="m24"></a>
-### M24. Profile entropy and the exact sublinear exponent
+### M24. The exact sublinear scheduling gain
 
-**Central question.** Can the number of available low-variation histories compensate for the probability of their required successes?
+**Central question.** How much rate can scheduling recover when the memory lifetime grows more slowly than the chain?
 
-**Understanding target.** Relate the logarithm of the profile count to its allowed variation per edge. Explain why, at fixed $`p`$, a sublinear lifetime gives only subexponential profile multiplicity and therefore leaves the leading rate exponent equal to $`\ln(1/p)`$. Distinguish this exponent statement from the absence of polynomial or other subexponential scheduling gains.
+**Understanding target.** Derive the profile-count scale $`a\ln(n/a)`$ and the exact fixed-lifetime power $`a=\lceil\tau\ln3\rceil-1`$. Trace a successful two-slot frame and show why alternating the orientation of block prefixes leaves one transition per block. Explain the $`\ln3`$ coefficient and its factor-of-two comparison with first-success protocols that attempt every unfinished edge each slot and fully reset between cycles.
 
-**Dependencies and story role.** Combines [M12](#m12), [M19](#m19) and [M22](#m22). It converts the finite envelope into the principal scaling law.
+**Dependencies and story role.** Combines [M11](#m11), [M12](#m12), [M17](#m17)–[M19](#m19) and [M22](#m22). It matches the counting envelope with a causal schedule and carries the raw-pair gain through endpoint distillation to the operational rate.
 
-**Conceptual connection.** The competition is between the multiplicity of admissible histories and the independent-success factor. The exact exponent follows when the multiplicity is too small to change the leading exponential cost.
+**Conceptual connection.** The multiplicity of possible transition locations changes the rate on a scale below the leading $`n\ln p`$ term. Alternating the retained runs' orientations realizes this multiplicity inside the memory exposure budget.
 
-**Source pointers.** Local asymptotic proof: [sublinear-lifetime exponent](../science/adaptive_converse.md#synchronized-generation-and-the-sublinear-lifetime-exponent). Sharper local counting analysis: [entropy of the profile count](../science/finite_bounds.md#4-entropy-of-the-profile-count). Meaning of the remaining improvements: [what scheduling can still improve](../science/interpretation.md#what-scheduling-can-still-improve).
+**Source pointers.** Canonical result and proof: [sharp scheduling law](../science/scheduling.md). Worked mechanism: [two-slot frame](TUTORIAL.md#how-to-attain-the-sublinear-scheduling-gain). Counting foundation: [entropy of the profile count](../science/finite_bounds.md#4-entropy-of-the-profile-count).
 
 <a id="m25"></a>
 ### M25. Small linear lifetime coefficients
@@ -349,7 +349,7 @@ The single educational anchor is **Mark M. Wilde, *From Classical to Quantum Sha
 
 **Understanding target.** Explain the feasibility of the local swap schedule, the logarithmic mean completion time and the linear mean accumulated exposure. Distinguish the average visibility from visibility evaluated at average exposure. Recognize that a cycle's duration and state quality can be correlated even though different reset cycles are iid.
 
-**Dependencies and story role.** Uses [M03](#m03), [M04](#m04), [M06](#m06), [M13](#m13) and [M17](#m17). It begins the constructive side with a concrete allowed protocol.
+**Dependencies and story role.** Uses [M03](#m03), [M04](#m04), [M06](#m06), [M13](#m13) and [M17](#m17). It introduces the separate construction used in the linear-lifetime regime.
 
 **Conceptual connection.** The inherited ASAP factory exposes the resource that the converse detects: quick completion can coexist with extensive memory exposure. Its state and timing statistics are inputs to a separate rate argument.
 
@@ -399,13 +399,13 @@ The single educational anchor is **Mark M. Wilde, *From Classical to Quantum Sha
 
 **Central question.** What has the project resolved, and which changes of resources or regimes require a different conclusion?
 
-**Understanding target.** Connect the architecture, causal invariant, genealogy, profile envelope and endpoint budget into one account of the result. Distinguish inherited ASAP and entanglement ingredients from the adaptive converse. Explain the allowed finite and subexponential gains, the unresolved linear-coefficient interval, buffering versus generation multiplexing, and the consequences of changing intermediate quantum operations, endpoint quantum feedback or noise correlations.
+**Understanding target.** Connect the architecture, causal invariant, genealogy, profile envelope and endpoint budget to the two-slot schedule. Identify the sharp depolarizing scheduling gain, the scope of the first-success comparison and the unresolved linear-coefficient interval. Explain why generation bandwidth, intermediate quantum operations, endpoint quantum feedback and noise correlations affect the result.
 
 **Dependencies and story role.** Integrates [M13](#m13), [M22](#m22)–[M25](#m25) and [M28](#m28)–[M29](#m29). This is the global synthesis of Phase II and of the map.
 
 **Conceptual connection.** The result is an architecture theorem with a precisely charged source clock. Its physical meaning depends on fixed generation probability and bandwidth, the memory channel and the permitted quantum interface; it is not a capacity theorem for every repeater architecture.
 
-**Source pointers.** Canonical synthesis: [interpretation](../science/interpretation.md), especially [bandwidth](../science/interpretation.md#buffer-capacity-and-source-bandwidth), [the unresolved coefficient boundary](../science/interpretation.md#a-linear-lifetime-is-an-order-threshold-not-a-solved-phase-boundary) and [physical units and scope](../science/interpretation.md#physical-units-and-model-boundary). Attribution: [what the comparison establishes](../references/RELATED_WORK.md#what-the-comparison-establishes). Authoritative assumptions: [model](../science/model.md).
+**Source pointers.** Canonical synthesis: [sharp scheduling law](../science/scheduling.md) and [interpretation](../science/interpretation.md), especially [bandwidth](../science/interpretation.md#buffer-capacity-and-source-bandwidth), [the unresolved coefficient boundary](../science/interpretation.md#a-linear-lifetime-is-an-order-threshold-not-a-solved-phase-boundary) and [physical units and scope](../science/interpretation.md#physical-units-and-model-boundary). Attribution: [what the comparison establishes](../references/RELATED_WORK.md#what-the-comparison-establishes). Authoritative assumptions: [model](../science/model.md).
 
 ## Continuing through the scientific sources
 

@@ -229,7 +229,7 @@ It does not assert that a profile selected by the controller has probability $`p
 There are $`H`$ choices for $`t_1`$. For each choice, the integer increments $`z_i=t_{i+1}-t_i`$ satisfy $`\sum_i|z_i|\le a`$. Choosing their $`j`$ nonzero locations, their signs, and their positive magnitudes gives exactly
 
 ```math
-\left|\left\{z\in\mathbb Z^{n-1}:\|z\|_1\le a\right\}\right|
+\left|\left\{z\in\mathbb Z^{n-1}:\lVert z\rVert_1\le a\right\}\right|
 =\sum_{j=0}^{\min(n-1,a)}2^j\binom{n-1}{j}\binom aj
 =K(n,a).
 \qquad\text{(23)}
@@ -328,7 +328,7 @@ E_F(\rho)\ge -S(A|B)_\rho.
 
 Indeed, conditional entropy is concave, and for each pure state $`\psi_x`$ in a decomposition of $`\rho`$, $`S(A|B)_{\psi_x}=-S(A)_{\psi_x}`$. Taking the infimum over decompositions proves (33).
 
-Let $`\rho`$ be the state of the two $`d=2^k`$ dimensional target registers and suppose $`\frac12\|\rho-\Phi_d\|_1\le\varepsilon\le1/2`$. Measuring $`\{\Phi_d,I-\Phi_d\}`$ gives
+Let $`\rho`$ be the state of the two $`d=2^k`$ dimensional target registers and suppose $`\frac12\lVert \rho-\Phi_d\rVert_1\le\varepsilon\le1/2`$. Measuring $`\{\Phi_d,I-\Phi_d\}`$ gives
 
 ```math
 F=\mathrm{Tr}(\Phi_d\rho),\qquad

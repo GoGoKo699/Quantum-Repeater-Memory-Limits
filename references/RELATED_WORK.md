@@ -1,6 +1,6 @@
 # Related work and attribution
 
-The scientific contribution is a rate bound over adaptive scheduling policies in a specified unencoded repeater architecture. The ingredients inherited from quantum repeater analysis and entanglement theory are identified below. The [model](../science/model.md) fixes the operational comparison.
+The scientific contribution is a sharp rate law over adaptive scheduling policies in a specified unencoded repeater architecture. The ingredients inherited from quantum repeater analysis and entanglement theory are identified below. The [model](../science/model.md) fixes the operational comparison.
 
 ## Repeater timing and accumulated noise
 
@@ -11,7 +11,7 @@ Kenneth Goodenough, Tim Coopmans and Don Towsley, **On noise in swap ASAP repeat
 
 This is the closest structural predecessor. It represents the accumulated noise of a swap-as-soon-as-possible chain through differences of adjacent elementary generation times, and develops exact generating functions, fidelity distributions and asymptotic approximations. It also analyzes a global cutoff policy. Its principal model permits perfect endpoint memories and treats the relevant Pauli noise channels.
 
-The storage-exposure identity, Bell-noise multiplication, ASAP construction and synchronized-success benchmark are inherited here. The new argument counts all feasible low-variation source histories in a presampled Bernoulli field. It therefore bounds arbitrary causal discarding, replacement, buffering and pipelining policies without assuming the first-success acquisition process used to analyze ASAP.
+The storage-exposure identity, Bell-noise multiplication, ASAP construction and synchronized-success benchmark are inherited here. The adaptive converse counts all feasible low-variation source histories in a presampled Bernoulli field. The [scheduling theorem](../science/scheduling.md) uses a causal rule that can discard a successful trial and try that edge again. It attains the adaptive log-rate correction and gives a separate sharp coefficient for the first-success full-reset class, using the established geometric profile law.
 
 <a id="kamin23"></a>
 ### Kamin23: rates for imperfect memories and immediate swapping
@@ -38,14 +38,14 @@ The present obstruction remains after classical propagation time and local proce
 
 Álvaro G. Iñesta, Gayane Vardoyan, Lara Scavuzzo and Stephanie Wehner, **Optimal entanglement distribution policies in homogeneous repeater chains with cutoffs**, *npj Quantum Information* **9**, 46 (2023). [Published article](https://doi.org/10.1038/s41534-023-00713-9).
 
-This work uses Markov decision processes to optimize entanglement distribution under imposed storage cutoffs and compares global-knowledge policies with local policies. Such finite-state optimization determines useful policies within its operational model. Our converse instead bounds the full admitted class without enumerating its state or action space; the comparison is about a distance exponent rather than a finite-chain policy optimum.
+This work uses Markov decision processes to optimize entanglement distribution under imposed storage cutoffs and compares global-knowledge policies with local policies. Such finite-state optimization determines useful policies within its operational model. Our converse instead bounds the full admitted class without enumerating its state or action space; the comparison concerns the asymptotic distilled rate over the full admitted class.
 
 <a id="haldar24"></a>
 ### Haldar24: policies learned by reinforcement learning
 
 Stav Haldar, Pratik J. Barge, Sumeet Khatri and Hwang Lee, **Fast and reliable entanglement distribution with quantum repeaters: Principles for improving protocols using reinforcement learning**, *Physical Review Applied* **21**, 024041 (2024). [Published article](https://doi.org/10.1103/PhysRevApplied.21.024041) · [arXiv:2303.00777v4](https://arxiv.org/html/2303.00777v4).
 
-Adaptive, state-dependent cutoffs and coordination can improve waiting time and fidelity over fixed or dynamic swap-ASAP policies. Haldar and colleagues also construct nested policies for larger chains. These improvements are compatible with the present theorem: the bound does not rule out finite-chain or subexponential gains. It fixes the leading exponential rate in the stated sublinear-lifetime regime.
+Adaptive, state-dependent cutoffs and coordination can improve waiting time and fidelity over fixed or dynamic swap-ASAP policies. Haldar and colleagues also construct nested policies for larger chains. These improvements are compatible with the present theorem: the bound does not rule out finite-chain or subexponential gains. It fixes the leading exponential rate and the first sublinear log-rate correction in the stated model.
 
 <a id="laurenza22"></a>
 ### Laurenza22: capacity bounds with lossy repeater stations
@@ -53,6 +53,12 @@ Adaptive, state-dependent cutoffs and coordination can improve waiting time and 
 Riccardo Laurenza, Nathan Walk, Jens Eisert and Stefano Pirandola, **Rate limits in quantum networks with lossy repeaters**, *Physical Review Research* **4**, 023158 (2022). [Published article](https://doi.org/10.1103/PhysRevResearch.4.023158) · [arXiv:2110.10168](https://arxiv.org/abs/2110.10168).
 
 Node splitting and channel-simulation methods provide rate limits when repeater stations introduce losses. The time-dependent analysis emphasizes that a memory's effective channel depends on its storage duration and hence on the chosen repeater protocol. Here the random successful source times are included explicitly, and the profile count bounds the storage patterns available to every admitted policy.
+
+### CCZ26: scheduling distillation and swapping
+
+Siddharth Chander, Xinan Chen and Allen Zang, **Entanglement Distillation and Swapping Scheduling in Quantum Repeaters with Noisy Memories** (2026 preprint). [arXiv:2607.24557](https://arxiv.org/abs/2607.24557).
+
+This work studies scheduling with distillation in elementary building blocks and reports two-hop simulations. The [scheduling theorem](../science/scheduling.md) instead uses only intermediate Bell swaps, distills at the endpoints, and takes a long-chain limit at fixed per-edge attempt bandwidth.
 
 ## Entanglement facts used in the proofs
 
@@ -86,7 +92,7 @@ The bilateral isotropic twirl preserves the target singlet fraction and is an LO
 
 ## What the comparison establishes
 
-The prior works supply the noise bookkeeping, practical scheduling motivations and standard distillation machinery. The distinct contribution is the adaptive source-profile envelope and its conversion to an endpoint-distilled entanglement-rate bound. That conversion yields the exact sublinear-lifetime exponent, finite weighted bounds and a noise-channel distinction within one explicit resource model.
+The prior works supply the noise bookkeeping, practical scheduling motivations and standard distillation machinery. The adaptive source-profile envelope and the endpoint entanglement budget give an upper rate bound. The two-slot construction attains its first log-rate correction for sublinear memory lifetimes, and the first-success reset analysis identifies the part of that gain due to selective retention.
 
 The result is an architecture theorem. It makes no unrestricted quantum-network capacity claim and does not compare all hardware resources through a single scalar coherence time. The [interpretation](../science/interpretation.md) explains how bandwidth, intermediate quantum processing and source timing enter that boundary.
 

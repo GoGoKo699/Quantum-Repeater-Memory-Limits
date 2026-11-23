@@ -181,7 +181,27 @@ If $`\tau_n=o(n)`$, then $`\ln K(n,a_{\tau_n})=o(n)`$. The two bounds therefore 
 \boxed{\ln R_n(\tau_n,p)=n\ln p+o(n).}
 ```
 
-The correction divided by $`n`$ vanishes. Scheduling may still improve finite rates and subexponential factors. When $`\tau\le1/\ln3`$, the cutoff is zero and the stronger exact equality $`R_n=p^n`$ holds. The scaling argument is developed in [M24](MILESTONES.md#m24).
+The correction divided by $`n`$ vanishes. Its size can still matter for a long chain. When $`\tau\le1/\ln3`$, the cutoff is zero and the exact rate is $`R_n=p^n`$.
+
+### How to attain the sublinear scheduling gain
+
+Divide the chain into contiguous blocks of at least two edges. In slot 1, attempt every edge. In each block, scan the heralded results from a predetermined end and retain the initial run of successes if it is nonempty and stops before the block ends. Discard any other successes. In slot 2, try the other edges in each block. A frame succeeds if all blocks have an allowed initial run and all the required slot-2 attempts succeed. Swapping as soon as the two selected neighboring qubits are present makes the storage exposure equal the variation in their birth times.
+
+Alternate the scan direction between neighboring blocks. For two blocks of four edges, one successful choice of retained runs gives the birth times
+
+```math
+(1,1,2,2\mid 2,1,1,1).
+```
+
+Each block contributes one transition between slots. The equal times at the block boundary mean it contributes zero. Each scan can stop at any of $`m-1`$ positions in a block of length $`m`$. A given run length $`k`$ requires $`k`$ consecutive slot-1 successes, then a slot-1 failure, then $`m-k`$ slot-2 successes. These disjoint cases give the block acceptance probability $`(m-1)(1-p)p^m`$. The extra successes discarded in slot 1 impose no additional condition.
+
+With $`a`$ blocks, there are $`a`$ units of exposure and all accepted pairs have visibility $`e^{-a/\tau}`$. Choose $`a<\tau\ln3`$ so the pairs can be distilled at the endpoints. The factor from the possible run lengths is roughly $`(n/a)^a`$ for balanced blocks. When $`p`$ is fixed and $`\tau_n\to\infty`$ with $`\tau_n=o(n)`$, the [matching profile-count bound and schedule](../science/scheduling.md) yield the rate law
+
+```math
+\ln R_n(\tau_n,p)=n\ln p+(\ln3+o(1))\tau_n\ln(n/\tau_n).
+```
+
+For fixed $`\tau>0`$, the same mechanism gives $`R_n=\Theta_{p,\tau}\bigl(p^n n^{\lceil\tau\ln3\rceil-1}\bigr)`$. The optimal growing-lifetime coefficient is $`\tfrac12\ln3`$ for protocols that run one first-success cycle at a time, attempt every unfinished edge in every active slot and reset fully between cycles. The attaining first-success scheme uses isolated late interior edges, each costing two transitions. The alternating schedule pays one per block. The formal comparison counts all admissible first-success profiles for the upper bound. Both slots of every frame count, and the rate includes distillation across many frames. Follow [M24](MILESTONES.md#m24) for the proof route.
 
 ## 7. Constructive rates and the remaining gap
 

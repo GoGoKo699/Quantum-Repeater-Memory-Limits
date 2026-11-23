@@ -85,7 +85,7 @@ The [profile count](../science/adaptive_converse.md#counting-potential-successfu
 K(n,a)=\sum_{j=0}^{\min(n-1,a)}2^j\binom{n-1}{j}\binom aj.
 ```
 
-Assigning probability $`p^n`$ to a profile selected adaptively by the controller would not justify this step. The proof instead sums over fixed potential profiles before taking expectation.
+Assigning probability $`p^n`$ to a profile selected adaptively by the controller would not justify this step. The proof instead sums over fixed potential profiles before taking expectation. The [two-slot schedule](../science/scheduling.md) makes the count tight at the scale of the logarithmic rate gain for diverging sublinear lifetimes and at the polynomial order for fixed lifetimes. Each block can realize several run lengths at the cost of one unit of exposure, independently of the other blocks. The [worked example](TUTORIAL.md#how-to-attain-the-sublinear-scheduling-gain) shows why block boundaries add zero.
 
 ### An entanglement budget for the entire endpoint stream
 

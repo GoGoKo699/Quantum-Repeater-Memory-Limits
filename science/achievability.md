@@ -1,6 +1,6 @@
 # Achievability with a fixed deadline
 
-This page constructs protocols for the Bell-link chain defined in [the model](model.md). All elementary attempts, discarded pairs, recurrence failures and missed deadlines are included in the rate. Endpoint quantum storage and endpoint operations are ideal, as specified in that model.
+This page constructs protocols for the Bell-link chain defined in [the model](model.md). All elementary attempts, discarded pairs, recurrence failures and missed deadlines are included in the rate. Endpoint quantum storage and endpoint operations are ideal, as specified in that model. The [two-slot scheduling construction](scheduling.md) uses the timing lemma and recurrence below to attain the sharp sublinear-lifetime correction.
 
 ## From reset cycles to deterministic-horizon rates
 

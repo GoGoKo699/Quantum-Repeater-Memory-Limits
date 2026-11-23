@@ -3,12 +3,13 @@
 This repository studies the distilled-ebit rate of a line of independent elementary sources joined by Bell swaps through noisy unencoded memories. Read assumptions before extrapolating a theorem to another repeater architecture.
 
 ## Start
-- README.md: question, main exponent, finite envelope, constructions and reading routes.
+- README.md: question, sharp sublinear scheduling gain, finite envelope, constructions and reading routes.
 - science/README.md: claim-to-file map.
 
 ## Scientific authority
 - science/model.md: permitted sources, independent product depolarization, controls, endpoint interface and operational rate. This is the authority for scope.
 - science/adaptive_converse.md: full proof, including causal conditioning, lineage injection, integer total-variation cutoff and entanglement-of-formation budget.
+- science/scheduling.md: finite two-slot scheme, exact sublinear log-rate correction, fixed-lifetime polynomial gain and first-success reset comparison.
 - science/finite_bounds.md: weighted finite bound, exact synchronized regime, lattice entropy and unresolved linear-coefficient interval.
 - science/achievability.md: deterministic-horizon timing lemma, synchronized protocol, ASAP/reset protocol and recurrence-plus-hashing sufficiency.
 - science/noise_comparison.md: independent phase channel, achievable rate and different leading exponent at the same lifetime.
@@ -25,7 +26,7 @@ This repository studies the distilled-ebit rate of a line of independent element
 - learning/MILESTONES.md: exactly M01 through M30, in background/preliminaries and narrative/innovation phases, with dependencies and understanding targets.
 - learning/TUTORIAL.md: a worked explanatory route connected to the settled milestone map. It does not replace the model or proofs.
 - Story: README.md -> science/interpretation.md -> science/model.md.
-- Theorem: science/model.md -> science/adaptive_converse.md -> science/finite_bounds.md.
+- Theorem: science/model.md -> science/adaptive_converse.md -> science/scheduling.md -> science/finite_bounds.md.
 - Constructions: science/achievability.md -> science/noise_comparison.md.
 - Reproduction: verification/README.md -> scripts and recorded outputs named there.
 

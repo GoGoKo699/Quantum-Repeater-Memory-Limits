@@ -12,6 +12,8 @@ a_\tau=\lceil\tau\ln3\rceil-1,
 W(v)=v\Phi_2+(1-v)\frac{I_4}{4}.
 ```
 
+The [sharp scheduling law](scheduling.md) gives a matching rate order for fixed lifetime and the first log-rate correction for diverging sublinear lifetime. The bounds below also apply at finite chain length.
+
 ## 1. Exact cutoff and synchronized regime
 
 For a delivered pair with elementary source times $`t_1,\ldots,t_n`$, its accumulated interior exposure satisfies

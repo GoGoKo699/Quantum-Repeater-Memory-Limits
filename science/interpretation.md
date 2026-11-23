@@ -22,13 +22,15 @@ For fixed $`p`$ and $`\tau_n=o(n)`$, the statement
 \ln R_n(\tau_n,p)=n\ln p+o(n)
 ```
 
-fixes the leading exponential dependence. It allows polynomial and larger subexponential advantages over synchronized generation. It also allows substantial improvements at finite length. Learned or optimized cutoff policies can therefore outperform ASAP, as in [Haldar24](../references/RELATED_WORK.md#haldar24), without contradicting the theorem.
+fixes the leading exponential dependence. The [sharp scheduling law](scheduling.md) determines the first correction. For a diverging sublinear lifetime it is $`(\ln 3+o(1))\tau_n\ln(n/\tau_n)`$ in the log rate. At fixed lifetime the gain is a power of $`n`$, with one exponent unit per integer exposure allowed strictly below $`\tau\ln 3`$.
+
+Retaining a first-slot run in each oriented block creates one adjustable exposure location per block. Alternating the orientation makes the boundary between blocks age-free. In a first-success reset cycle, an isolated late interior edge creates two age differences. The matching upper bound for that class shows that even more general first-success time profiles use only half as many freely placeable interior excursions at leading order.
 
 Two finite statements make the result more concrete. When $`\tau\le1/\ln3`$ slots, the optimal rate is exactly $`p^n`$. At $`n=10`$, $`p=1/2`$ and $`\tau=1`$ slot, the entanglement-weighted converse places the optimum between $`0.0009765625`$ and approximately $`0.0011180486`$ ebits per slot. The derivations and numerical conventions are in [finite bounds](finite_bounds.md).
 
 ## Buffer capacity and source bandwidth
 
-The converse allows arbitrarily many equally noisy stored pairs. Its resource restriction is one generation attempt per elementary edge per slot. Replacing an aged pair with a newer one or storing several candidates changes which source profile is selected, but does not change the probability of a fixed profile.
+The matching two-slot construction uses at most two active storage qubits per intermediate station, one per adjacent edge. The converse allows arbitrarily many equally noisy stored pairs. Its resource restriction is one generation attempt per elementary edge per slot. Replacing an aged pair with a newer one or storing several candidates changes which source profile is selected, but does not change the probability of a fixed profile.
 
 Increasing the number of simultaneous generation attempts changes that probability. For example, suppose each edge receives $`M`$ independent attempts per slot and retains one successful pair. Its effective success probability is
 

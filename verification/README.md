@@ -1,6 +1,6 @@
 # Reproducible finite checks
 
-Three standalone programs check the finite combinatorics, local noisy Bell swaps, and numerical bound calculations used in this repository. They use no Monte Carlo or external data. The analytical claims are proved in the [science pages](../science/README.md); these checks do not certify the all-policy converse or the endpoint-distillation argument.
+Four standalone programs check finite combinatorics, the two-slot schedule, local noisy Bell swaps and numerical rate bounds. They use no Monte Carlo or external data. The analytical claims are proved in the [science pages](../science/README.md); these checks do not certify the all-policy converse or the endpoint-distillation argument.
 
 The separate [hosted mathematics check](hosted/README.md) compares actual GitHub rendering with the pinned Markdown source. Its structural report and screenshots concern presentation, independently of the numerical checks below.
 
@@ -11,6 +11,7 @@ From the repository root, with ordinary Python execution, run:
 ```bash
 python -m pip install -r verification/requirements.txt
 python verification/run_all.py
+python verification/check_scheduling.py
 ```
 
 The dependency-installation command is unnecessary if the listed versions are already available. The recorded run used **CPython 3.12.14, NumPy 2.3.5 and Matplotlib 3.10.8**. NumPy is required for the density-matrix check. Matplotlib is required only for figure generation; the other calculations use Python's standard library.
@@ -23,7 +24,7 @@ python verification/check_finite_bounds.py
 python verification/repeater_bounds.py --plot
 ```
 
-All three commands were rerun successfully after packaging. Run without `-O`, since assertions implement the finite checks. `python verification/run_all.py --no-plot` runs the same numerical checks without generating the figure. Each script locates its output directories relative to its own file, independently of the caller's working directory. Existing generated outputs are replaced on rerun.
+The wrapper runs the three original numerical programs. The standalone scheduling check uses only the Python standard library and writes no files. Run without `-O`, since assertions implement the finite checks. `python verification/run_all.py --no-plot` runs the same numerical checks without generating the figure. Each script locates its output directories relative to its own file, independently of the caller's working directory. Existing generated outputs are replaced on rerun.
 
 ## What is checked
 
@@ -31,6 +32,7 @@ All three commands were rerun successfully after packaging. Run without `-O`, si
 | --- | --- | --- |
 | [check_repeater_small.py](check_repeater_small.py) | Brute-force integer balls for dimensions 0–4 and budgets 0–4; eight exact threshold cases; six density-matrix parameter cases with one or two Bell swaps | 25 integer cases, 8 threshold cases and all 60 Bell-outcome branches passed |
 | [check_finite_bounds.py](check_finite_bounds.py) | Independent shell-sum reconstruction and lattice-entropy bound for dimensions 1–25 and radii 0–50; coefficient and weighted-bound examples | All 1,275 finite cases passed; no positive log-bound excess |
+| [check_scheduling.py](check_scheduling.py) | Exact two-slot acceptance probabilities, stored-qubit occupancy, storage exposure and first-success benchmarks | 66 schedules, 254 accepted time profiles, 41 isolated-late counts and 90 exact weighted first-success bounds |
 | [repeater_bounds.py](repeater_bounds.py) | Positive transfer recursion for ASAP visibility, checked against a closed two-edge formula at three lifetimes; exact integer profile counts and finite rate-bound illustrations | All 3 analytic comparisons passed; 11 sublinear-exponent rows, 9 ASAP noise rows and 9 coefficient rows generated |
 
 The swap check applies independent local depolarizing channels to two- and three-link Bell states. It checks the corrected Werner output, each Bell outcome's probability, and the partial-transpose threshold. Its largest Frobenius state error and largest outcome-probability error were both **2.220446049250313 × 10⁻¹⁶**, against tolerances of $`10^{-12}`$. This is a local finite-state calculation, not a simulation of arbitrary adaptive schedules.
